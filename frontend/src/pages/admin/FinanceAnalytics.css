@@ -1,0 +1,772 @@
+/* Finance Analytics Styles */
+
+.finance-analytics {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f8f9fa 0%, #f3f4f5 100%);
+}
+
+.finance-container {
+  padding: 48px;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-size: 18px;
+  color: #737784;
+}
+
+/* ============= Asset Value Section ============= */
+
+.asset-value-section {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.flex-container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 32px 0;
+}
+
+.section-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.125rem;
+  color: #737784;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.main-heading {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #143665;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  font-family: 'Manrope', sans-serif;
+}
+
+.trend-badge {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #acf4a4;
+  color: #0c5216;
+  padding: 8px 16px;
+  border-radius: 9999px;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 700;
+}
+
+.trend-icon {
+  font-size: 16px;
+}
+
+.trend-text {
+  font-size: 14px;
+}
+
+.trend-subtext {
+  font-weight: 400;
+}
+
+/* ============= Chart Card ============= */
+
+.chart-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 32px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  position: relative;
+  overflow: hidden;
+  min-height: 400px;
+}
+
+/* ============= Revenue & Pending Section ============= */
+
+.revenue-pending-section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.revenue-pending-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.revenue-card,
+.pending-card,
+.rate-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 32px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: all 0.3s ease;
+  border-top: 4px solid;
+}
+
+.revenue-card {
+  border-top-color: #143665;
+}
+
+.revenue-card:hover {
+  box-shadow: 0 8px 24px rgba(20, 54, 101, 0.15);
+  transform: translateY(-2px);
+}
+
+.pending-card {
+  border-top-color: #ff9800;
+}
+
+.pending-card:hover {
+  box-shadow: 0 8px 24px rgba(255, 152, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.rate-card {
+  border-top-color: #2a6b2c;
+}
+
+.rate-card:hover {
+  box-shadow: 0 8px 24px rgba(42, 107, 44, 0.15);
+  transform: translateY(-2px);
+}
+
+.card-icon-large {
+  font-size: 56px;
+  margin-bottom: 16px;
+}
+
+.metric-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.125rem;
+  color: #737784;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  font-family: 'Inter', sans-serif;
+}
+
+.metric-value-large {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #143665;
+  line-height: 1;
+  margin-bottom: 8px;
+  font-family: 'Manrope', sans-serif;
+}
+
+.metric-value-large.pending-value {
+  color: #ff9800;
+}
+
+.metric-subtitle {
+  font-size: 13px;
+  color: #737784;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 48px;
+  position: relative;
+  z-index: 10;
+}
+
+.chart-title {
+  font-size: 1.875rem;
+  font-weight: 800;
+  color: #143665;
+  margin-bottom: 8px;
+  font-family: 'Manrope', sans-serif;
+}
+
+.chart-subtitle {
+  color: #737784;
+  font-size: 14px;
+  font-family: 'Inter', sans-serif;
+}
+
+.badge-group {
+  display: flex;
+  gap: 8px;
+}
+
+.badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.badge-primary {
+  background: rgba(20, 54, 101, 0.05);
+  color: #143665;
+}
+
+.badge-secondary {
+  background: rgba(42, 107, 44, 0.05);
+  color: #2a6b2c;
+}
+
+.chart-svg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 256px;
+}
+
+/* ============= Dual Card Section ============= */
+
+.dual-card-section {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 32px;
+}
+
+/* Rental Yield Card */
+.rental-yield-card {
+  background: #f3f4f5;
+  border-radius: 12px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-header-main {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.card-icon {
+  font-size: 20px;
+}
+
+.card-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.125rem;
+  color: #737784;
+  text-transform: uppercase;
+}
+
+.card-heading {
+  font-size: 1.875rem;
+  font-weight: 800;
+  color: #143665;
+  margin-bottom: 8px;
+  font-family: 'Manrope', sans-serif;
+}
+
+.card-description {
+  color: #737784;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+
+.metrics-container {
+  display: flex;
+  gap: 32px;
+  align-items: flex-end;
+}
+
+.metric-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.metric-label {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  color: #737784;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+}
+
+.metric-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #143665;
+  font-family: 'Manrope', sans-serif;
+}
+
+.metric-circle {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle-inner {
+  width: 64px;
+  height: 64px;
+  border: 4px solid #acf4a4;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle-value {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #2a6b2c;
+}
+
+/* Sales Card */
+.sales-card {
+  background: linear-gradient(135deg, #143665 0%, #2f4d7e 100%);
+  color: white;
+  border-radius: 12px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 8px 24px rgba(20, 54, 101, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.sales-card-inner {
+  position: relative;
+  z-index: 10;
+}
+
+.sales-heading {
+  font-size: 1.875rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+  font-family: 'Manrope', sans-serif;
+}
+
+.sales-description {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  margin-bottom: 32px;
+}
+
+.progress-container {
+  margin-bottom: 32px;
+}
+
+.progress-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 16px;
+}
+
+.progress-label {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.progress-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: 'Manrope', sans-serif;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #acf4a4;
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+.view-forecast-btn {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: white;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 8px;
+}
+
+.view-forecast-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.btn-icon {
+  font-size: 14px;
+}
+
+.sales-bg-icon {
+  position: absolute;
+  bottom: -32px;
+  right: -32px;
+  font-size: 180px;
+  opacity: 0.1;
+  z-index: 1;
+}
+
+/* ============= Transactions Section ============= */
+
+.transactions-section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-bottom: 48px;
+}
+
+.transaction-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.transactions-heading {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #143665;
+  margin-bottom: 4px;
+  font-family: 'Manrope', sans-serif;
+}
+
+.transactions-subtitle {
+  color: #737784;
+  font-size: 14px;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary {
+  background: #edeeef;
+  color: #143665;
+}
+
+.btn-secondary:hover {
+  background: #e7e8e9;
+}
+
+.btn-primary {
+  background: #143665;
+  color: white;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+.btn-icon-inline {
+  font-size: 16px;
+}
+
+/* ============= Table ============= */
+
+.table-wrapper {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+}
+
+.transactions-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.transactions-table thead {
+  background: #f3f4f5;
+  border-bottom: 1px solid #e1e3e4;
+}
+
+.transactions-table th {
+  padding: 20px 32px;
+  text-align: left;
+  font-size: 0.6875rem;
+  font-weight: 800;
+  color: #737784;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-family: 'Inter', sans-serif;
+}
+
+.transactions-table tbody tr {
+  border-bottom: 1px solid #edeeef;
+  transition: background-color 0.2s ease;
+}
+
+.transactions-table tbody tr:hover {
+  background-color: rgba(20, 54, 101, 0.02);
+}
+
+.transactions-table td {
+  padding: 24px 32px;
+}
+
+.asset-cell {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.asset-icon {
+  width: 40px;
+  height: 40px;
+  background: #edeeef;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: #143665;
+  font-size: 14px;
+}
+
+.asset-name {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 700;
+  color: #143665;
+  transition: color 0.2s ease;
+}
+
+.transactions-table tbody tr:hover .asset-name {
+  color: #2a6b2c;
+}
+
+.asset-type {
+  font-size: 0.75rem;
+  color: #737784;
+}
+
+.cell-text {
+  font-size: 14px;
+  color: #737784;
+  font-family: 'Inter', sans-serif;
+}
+
+.amount-text {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 700;
+  color: #143665;
+  font-size: 14px;
+}
+
+.amount-text.negative {
+  color: #ba1a1a;
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.status-verified {
+  background: #acf4a4;
+  color: #0c5216;
+}
+
+.status-pending {
+  background: #ffd5a4;
+  color: #5d4e0f;
+}
+
+.status-rejected {
+  background: #ffdad6;
+  color: #93000a;
+}
+
+/* ============= Responsive Design ============= */
+
+@media (max-width: 1024px) {
+  .finance-container {
+    padding: 32px;
+    gap: 32px;
+  }
+
+  .dual-card-section {
+    grid-template-columns: 1fr;
+  }
+
+  .revenue-pending-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .main-heading {
+    font-size: 2.5rem;
+  }
+
+  .chart-card {
+    min-height: 300px;
+  }
+
+  .transaction-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .action-buttons {
+    width: 100%;
+  }
+
+  .btn {
+    flex: 1;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .finance-container {
+    padding: 24px;
+    gap: 24px;
+  }
+
+  .main-heading {
+    font-size: 2rem;
+  }
+
+  .flex-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 24px 0;
+  }
+
+  .trend-badge {
+    width: 100%;
+  }
+
+  .chart-card {
+    padding: 24px;
+    min-height: 250px;
+  }
+
+  .chart-header {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .badge-group {
+    flex-wrap: wrap;
+  }
+
+  .metrics-container {
+    flex-wrap: wrap;
+  }
+
+  .metric-circle {
+    margin-left: 0;
+    margin-top: 16px;
+  }
+
+  .revenue-pending-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .transactions-table th,
+  .transactions-table td {
+    padding: 16px 12px;
+  }
+
+  .asset-cell {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .card-icon-large {
+    font-size: 40px;
+  }
+
+  .metric-value-large {
+    font-size: 2rem;
+  }
+}
+
+/* ============= Print Styles ============= */
+
+@media print {
+  .finance-analytics {
+    background: white;
+  }
+
+  .finance-container {
+    max-width: 100%;
+  }
+
+  .chart-card,
+  .sales-card,
+  .rental-yield-card,
+  .table-wrapper {
+    box-shadow: none;
+    border: 1px solid #e1e3e4;
+  }
+
+  .action-buttons {
+    display: none;
+  }
+}

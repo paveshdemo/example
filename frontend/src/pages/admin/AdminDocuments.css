@@ -1,0 +1,396 @@
+/* admin Documents Styling */
+
+.documents-filters {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+.search-box {
+  flex: 1;
+  min-width: 250px;
+  display: flex;
+  align-items: center;
+  background: white;
+  border: 2px solid #e1e3e4;
+  border-radius: 8px;
+  padding: 0 16px;
+  transition: all 0.3s ease;
+}
+
+.search-box:focus-within {
+  border-color: #143665;
+  box-shadow: 0 0 0 3px rgba(20, 54, 101, 0.1);
+}
+
+.search-box input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 12px 8px;
+  font-size: 14px;
+  font-family: 'Inter', sans-serif;
+}
+
+.search-box svg {
+  color: #737784;
+  margin-right: 8px;
+}
+
+.filter-select {
+  min-width: 200px;
+  padding: 12px 16px;
+  border: 2px solid #e1e3e4;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: 'Inter', sans-serif;
+  background: white;
+  color: #191c1d;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-select:hover {
+  border-color: #143665;
+}
+
+.filter-select:focus {
+  outline: none;
+  border-color: #143665;
+  box-shadow: 0 0 0 3px rgba(20, 54, 101, 0.1);
+}
+
+/* ============= Grouped Documents View ============= */
+
+.documents-grouped {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.document-group-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  border-left: 4px solid #143665;
+}
+
+.document-group-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* ============= Group Header (2-Column Layout) ============= */
+
+.group-header {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 24px;
+  padding: 20px 24px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #f3f4f5 100%);
+  border-bottom: 2px solid #e1e3e4;
+  align-items: center;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.customer-info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.customer-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #143665 0%, #2f4d7e 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.customer-name {
+  font-size: 15px;
+  font-weight: 700;
+  color: #143665;
+  margin: 0;
+  font-family: 'Manrope', sans-serif;
+}
+
+.property-title {
+  font-size: 13px;
+  color: #737784;
+  margin: 4px 0 0 0;
+  font-family: 'Inter', sans-serif;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.property-type-badge {
+  display: inline-block;
+  background: #143665;
+  color: white;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: capitalize;
+  letter-spacing: 0.05em;
+}
+
+.document-count {
+  background: rgba(42, 107, 44, 0.1);
+  color: #2a6b2c;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* ============= Documents List ============= */
+
+.documents-list {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+
+.document-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  background: white;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  border: 1px solid #e1e3e4;
+  transition: all 0.3s ease;
+}
+
+.document-item:last-child {
+  margin-bottom: 0;
+}
+
+.document-item:hover {
+  background: #f8f9fa;
+  border-color: #143665;
+  transform: translateX(4px);
+}
+
+.doc-info {
+  flex: 1;
+}
+
+.doc-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #143665;
+  margin-bottom: 8px;
+  font-family: 'Manrope', sans-serif;
+}
+
+.doc-meta {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.doc-category {
+  font-size: 12px;
+  color: #737784;
+  background: #f3f4f5;
+  padding: 4px 8px;
+  border-radius: 4px;
+  text-transform: capitalize;
+}
+
+.doc-date {
+  font-size: 12px;
+  color: #737784;
+}
+
+.doc-actions {
+  display: flex;
+  gap: 8px;
+  margin-left: 16px;
+}
+
+.btn-download {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  background: linear-gradient(135deg, #143665 0%, #2f4d7e 100%);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-family: 'Manrope', sans-serif;
+}
+
+.btn-download:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(20, 54, 101, 0.2);
+}
+
+.btn-download svg {
+  font-size: 14px;
+}
+
+/* ============= Empty State ============= */
+
+.empty-state {
+  text-align: center;
+  padding: 60px 24px;
+  background: white;
+  border-radius: 12px;
+  border: 2px dashed #e1e3e4;
+}
+
+.empty-state p {
+  font-size: 16px;
+  color: #737784;
+  margin: 0;
+  font-family: 'Manrope', sans-serif;
+}
+
+/* ============= Responsive Design ============= */
+
+@media (max-width: 1024px) {
+  .documents-filters {
+    flex-direction: column;
+  }
+
+  .search-box {
+    min-width: auto;
+  }
+
+  .filter-select {
+    width: 100%;
+  }
+
+  .group-header {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .header-right {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .document-group-card {
+    border-left-width: 2px;
+  }
+
+  .group-header {
+    padding: 16px;
+    grid-template-columns: 1fr;
+  }
+
+  .customer-info {
+    gap: 12px;
+  }
+
+  .customer-avatar {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .customer-name {
+    font-size: 14px;
+  }
+
+  .property-title {
+    font-size: 12px;
+  }
+
+  .header-right {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+
+  .property-type-badge,
+  .document-count {
+    text-align: center;
+  }
+
+  .document-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .doc-actions {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .btn-download {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .doc-meta {
+    flex-direction: column;
+    gap: 6px;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .documents-filters {
+    gap: 8px;
+  }
+
+  .search-box {
+    padding: 0 12px;
+  }
+
+  .filter-select {
+    font-size: 13px;
+    padding: 10px 12px;
+  }
+
+  .document-group-card {
+    border-radius: 8px;
+  }
+
+  .group-header {
+    padding: 12px;
+  }
+
+  .customer-avatar {
+    width: 36px;
+    height: 36px;
+  }
+
+  .document-item {
+    padding: 12px;
+    margin-bottom: 8px;
+  }
+}

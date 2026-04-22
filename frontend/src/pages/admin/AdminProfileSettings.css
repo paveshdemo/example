@@ -1,0 +1,510 @@
+/* Admin Profile Settings Styles */
+
+.admin-profile-settings {
+  width: 100%;
+  background: linear-gradient(135deg, #f8f9fa 0%, #f3f4f5 100%);
+  min-height: 100vh;
+  padding: 48px 24px;
+}
+
+/* ============= Profile Header ============= */
+
+.profile-header {
+  background: linear-gradient(135deg, #143665 0%, #2f4d7e 100%);
+  color: white;
+  border-radius: 12px;
+  padding: 40px;
+  margin-bottom: 40px;
+  box-shadow: 0 8px 24px rgba(20, 54, 101, 0.15);
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.profile-avatar-large {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  font-weight: 800;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  flex-shrink: 0;
+}
+
+.profile-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin: 0 0 8px 0;
+  font-family: 'Manrope', sans-serif;
+}
+
+.profile-subtitle {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0 0 12px 0;
+}
+
+.profile-role {
+  margin: 0;
+}
+
+.role-badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* ============= Tab Navigation ============= */
+
+.profile-tabs {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 32px;
+  background: white;
+  padding: 12px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.tab-button {
+  flex: 1;
+  padding: 12px 20px;
+  background: transparent;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #737784;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Manrope', sans-serif;
+  letter-spacing: 0.02em;
+}
+
+.tab-button:hover {
+  background: #f3f4f5;
+  color: #143665;
+}
+
+.tab-button.active {
+  background: #143665;
+  color: white;
+  border-color: #143665;
+}
+
+/* ============= Alert Messages ============= */
+
+.alert {
+  padding: 16px 20px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  font-size: 14px;
+  font-weight: 600;
+  border-left: 4px solid;
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.alert-success {
+  background: #dcf7e0;
+  color: #0c5216;
+  border-left-color: #2a6b2c;
+}
+
+.alert-danger {
+  background: #fde4e1;
+  color: #93000a;
+  border-left-color: #ba1a1a;
+}
+
+/* ============= Profile Content ============= */
+
+.profile-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.settings-card {
+  background: white;
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.card-header {
+  margin-bottom: 36px;
+  padding-bottom: 24px;
+  border-bottom: 2px solid #f0f1f2;
+}
+
+.card-header h2 {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #143665;
+  margin: 0 0 8px 0;
+  font-family: 'Manrope', sans-serif;
+}
+
+.card-header p {
+  color: #737784;
+  font-size: 14px;
+  margin: 0;
+}
+
+/* ============= Forms ============= */
+
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #191c1d;
+  font-family: 'Manrope', sans-serif;
+}
+
+.form-input {
+  padding: 12px 16px;
+  border: 2px solid #e1e3e4;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: 'Inter', sans-serif;
+  transition: all 0.3s ease;
+  background: #ffffff;
+  color: #191c1d;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #143665;
+  box-shadow: 0 0 0 3px rgba(20, 54, 101, 0.1);
+}
+
+.form-input:disabled {
+  background: #f3f4f5;
+  color: #737784;
+  cursor: not-allowed;
+}
+
+.form-input-disabled {
+  background: #f3f4f5;
+  color: #737784;
+  border-color: #e1e3e4;
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 100px;
+  font-family: 'Inter', sans-serif;
+}
+
+.form-help {
+  font-size: 12px;
+  color: #737784;
+  margin-top: 2px;
+}
+
+/* ============= Account Status ============= */
+
+.account-status {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  padding: 24px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  margin-top: 24px;
+  border-left: 4px solid #143665;
+}
+
+.status-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.status-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #737784;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.status-badge {
+  font-size: 14px;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 6px;
+  display: inline-block;
+  width: fit-content;
+}
+
+.status-badge.active {
+  background: #dcf7e0;
+  color: #0c5216;
+}
+
+.status-badge.inactive {
+  background: #fde4e1;
+  color: #93000a;
+}
+
+.status-value {
+  font-size: 15px;
+  font-weight: 600;
+  color: #191c1d;
+}
+
+/* ============= Buttons ============= */
+
+.btn {
+  padding: 14px 28px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Manrope', sans-serif;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #143665 0%, #2f4d7e 100%);
+  color: white;
+  box-shadow: 0 4px 12px rgba(20, 54, 101, 0.2);
+}
+
+.btn-primary:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(20, 54, 101, 0.3);
+}
+
+.btn-warning {
+  background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%);
+  color: white;
+  box-shadow: 0 4px 12px rgba(255, 152, 0, 0.2);
+}
+
+.btn-warning:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 152, 0, 0.3);
+}
+
+.btn-large {
+  width: 100%;
+  padding: 16px;
+  font-size: 16px;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ============= Security Info ============= */
+
+.security-info {
+  background: #e3f2fd;
+  border-left: 4px solid #2196F3;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+
+.security-info p {
+  color: #1976D2;
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0 0 12px 0;
+}
+
+.security-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.security-info li {
+  color: #1976D2;
+  font-size: 13px;
+  padding: 6px 0;
+  padding-left: 24px;
+  position: relative;
+}
+
+.security-info li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  font-weight: 700;
+  color: #2a6b2c;
+}
+
+/* ============= Password Strength ============= */
+
+.password-strength {
+  margin-top: 12px;
+  padding: 16px;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.strength-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: #737784;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.strength-bar {
+  width: 100%;
+  height: 6px;
+  background: #e1e3e4;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.strength-fill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.strength-fill.weak {
+  background: #ba1a1a;
+  width: 33%;
+}
+
+.strength-fill.medium {
+  background: #ff9800;
+  width: 66%;
+}
+
+.strength-fill.strong {
+  background: #2a6b2c;
+  width: 100%;
+}
+
+/* ============= Login Activity ============= */
+
+.login-activity {
+  margin-top: 40px;
+  padding-top: 40px;
+  border-top: 2px solid #f0f1f2;
+}
+
+.login-activity h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #191c1d;
+  margin: 0 0 16px 0;
+  font-family: 'Manrope', sans-serif;
+}
+
+.login-activity p {
+  font-size: 14px;
+  color: #737784;
+  margin: 8px 0;
+}
+
+.login-activity strong {
+  color: #143665;
+  font-weight: 600;
+}
+
+/* ============= Responsive Design ============= */
+
+@media (max-width: 768px) {
+  .admin-profile-settings {
+    padding: 24px 16px;
+  }
+
+  .profile-header {
+    padding: 24px;
+    margin-bottom: 24px;
+  }
+
+  .header-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .profile-avatar-large {
+    width: 100px;
+    height: 100px;
+    font-size: 40px;
+  }
+
+  .profile-title {
+    font-size: 2rem;
+  }
+
+  .profile-tabs {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .settings-card {
+    padding: 24px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .account-status {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .card-header h2 {
+    font-size: 1.5rem;
+  }
+}
